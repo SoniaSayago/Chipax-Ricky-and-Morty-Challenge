@@ -1,18 +1,20 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  // Target: https://go.nuxtjs.dev/config-target
+  target: 'static',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - ricky-morty-challenge',
-    title: 'ricky-morty-challenge',
+    titleTemplate: '%s - rick_morty_front',
+    title: 'rick_morty_front',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: '' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -21,10 +23,12 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/css/style.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/ChallengeRepository'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -36,6 +40,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-fonts'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -45,10 +50,13 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'https://rickandmortyapi.com/api'
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
+    treeShake: true,
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
@@ -63,6 +71,16 @@ export default {
           success: colors.green.accent3
         }
       }
+    }
+  },
+  googleFonts: {
+    families: {
+      Roboto: true,
+      'Source+Sans+Pro': [100, 200, 300, 400, 500, 600, 700],
+      Raleway: {
+        wght: [100, 400],
+        ital: [100]
+      },
     }
   },
 
