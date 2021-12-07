@@ -34,7 +34,6 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'CharacterCard',
   props: [
-    // eslint-disable-next-line vue/require-prop-types
     'character'
   ],
 })
