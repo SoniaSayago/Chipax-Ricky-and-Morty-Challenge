@@ -1,10 +1,25 @@
-# ricky-morty-challenge
+
+# Rick and Morty challenge
+
+![alt text](https://firebasestorage.googleapis.com/v0/b/tuit-5a5ab.appspot.com/o/bg2.png?alt=media&token=4f833cff-e861-4746-8fec-2a2e4d6135d9)
+
+Rick and Morty challenge es el resultado de la primera prueba técnica de [Chipax](https://www.chipax.com/) y consta de dos funcionalidades principales:
+
+* **Char counter**: Cuenta las letras 'c' dentro de los *characters*, las letras l dentro de las *locations* y las letras 'e' dentro de los *episodes*.
+
+* **Episode locations**: Para cada *episode*, indicar la cantidad y un listado con las *location (origin)* de todos los *character* que aparecieron en ese *episode* (sin repetir).
+
+[Demo](https://chipax-ricky-and-morty-challenge-7iwoljcai-soniasayago.vercel.app/)
 
 ## Build Setup
+
+Asumiendo que ya tienes instalado [npm](https://www.npmjs.com/get-npm), al momento de clonar deberás instalar las dependencias necesarias antes de correr el proyecto:
 
 ```bash
 # install dependencies
 $ npm install
+
+Asumiendo que ya tienes instalado [vue-cli](https://cli.vuejs.org), ejecuta el siguiente comando:
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -17,53 +32,8 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+### Vista previa
 
-## Special Directories
+En el siguiente link se disponibiliza una compilación de sitio estático para demostración:
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+https://chipax-ricky-and-morty-challenge-7iwoljcai-soniasayago.vercel.app/
