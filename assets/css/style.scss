@@ -1,0 +1,15 @@
+.v-application--wrap {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/tuit-5a5ab.appspot.com/o/bg3.png?alt=media&token=39fec4a1-81ec-48f4-9611-5aa98c1d8e5f');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.custom-title {
+    color: whitesmoke;
+    text-shadow: 1px 1px black;
+}
+
+.v-slide-group__next>.theme--light.v-icon,
+.v-slide-group__prev>.theme--light.v-icon {
+    color: rgb(9, 202, 25) !important;
+}
