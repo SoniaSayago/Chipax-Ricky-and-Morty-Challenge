@@ -8,24 +8,6 @@
         <v-row>
           <v-col>
             <div>
-              Species
-            </div>
-            <div>
-              <strong>{{character ? character.species : '' }}</strong>
-            </div>
-          </v-col>
-          <v-col>
-            <div>
-              Gender
-            </div>
-            <div>
-              <strong>{{character ? character.gender : '' }}</strong>
-            </div>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col>
-            <div>
               Origin
             </div>
             <div>
@@ -52,6 +34,7 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'CharacterCard',
   props: [
+    // eslint-disable-next-line vue/require-prop-types
     'character'
   ],
 })

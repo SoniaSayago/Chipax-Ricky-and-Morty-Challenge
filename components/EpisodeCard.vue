@@ -20,14 +20,6 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col>
-            <div>
-              Air date
-            </div>
-            <div>
-              <strong>{{ episode ? episode.air_date : ''}}</strong>
-            </div>
-          </v-col>
         </v-row>
       </div>
     </v-card-text>
