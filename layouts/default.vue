@@ -76,7 +76,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Rick & Morty Challenge'
+      title: 'Rick & Morty Challenge with Chipax 🚀'
     }
   }
 }

@@ -8,14 +8,14 @@
       </div>
     </v-row>
     <v-row class="mb-8">
-      <v-col :key="episode.name" md="4" v-for="episode in episodeResults">
+      <v-col v-for="episode in episodeResults" :key="episode.name" md="4">
         <EpisodeLocationCard :episode="episode" />
       </v-col>
     </v-row>
-    <v-row class="mb-5" v-if="fetchingMore">
+    <v-row v-if="fetchingMore" class="mb-5">
       <v-col class="text-center">
         <v-progress-circular indeterminate></v-progress-circular>
-        <p class="mt-3">Loading more awesome episodes...</p>
+        <p class="mt-3"> ⌛ Loading more awesome episodes...</p>
       </v-col>
     </v-row>
   </v-container>
@@ -31,11 +31,6 @@ export default Vue.extend({
   components: {
     EpisodeLocationCard
   },
-  computed: {
-    programDuration(): number {
-      return this.processTimes.length == 0 ? 0 : this.processTimes.reduce( (a,b) => a + b);
-    }
-  },
   data() {
     return {
       nextEpisodesPage:  '',
@@ -44,6 +39,11 @@ export default Vue.extend({
       fetchingDone: false,
       fetchingMore: false,
       processTimes: [] as number[]
+    }
+  },
+  computed: {
+    programDuration(): number {
+      return this.processTimes.length === 0 ? 0 : this.processTimes.reduce( (a,b) => a + b);
     }
   },
   mounted() {
@@ -58,14 +58,14 @@ export default Vue.extend({
   },
   methods: {
     scrollListener() {
-      let bottom = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
+      const bottom = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
       if (bottom && this.fetchingDone && !this.fetchingMore) this.fetchMoreEpisodes();
     },
     async getEpisodes() {
-      const startTime = new Date();
+      const startTime = await new Date();
       this.fetchingDone = false;
       (this as any).$repositories.episodeLocations()
-        .then((resEpisodes: { data: { episodes: Episode[]; next: string } }) => {
+        .then ((resEpisodes: { data: { episodes: Episode[]; next: string } }) => {
           this.episodeResults = resEpisodes.data.episodes;
           this.nextEpisodesPage = resEpisodes.data.next;
         })
@@ -80,11 +80,11 @@ export default Vue.extend({
     async fetchMoreEpisodes() {
       if (this.nextEpisodesPage && !this.fetchingMore) {
         this.fetchingMore = true;
-        const startTime = new Date();
+        const startTime = await new Date();
         (this as any).$repositories.moreEpisodeLocations(this.nextEpisodesPage)
           .then((res: any) => {
             this.episodeResults.push(...res.data.episodes);
-            this.nextEpisodesPage = res.data.next || null;
+            this.nextEpisodesPage = res.data.next ||null;
 
           })
           .catch((err: any) => {

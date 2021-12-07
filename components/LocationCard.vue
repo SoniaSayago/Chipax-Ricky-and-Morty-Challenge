@@ -3,6 +3,7 @@
     <v-card-title>
       {{ location ? location.name : '' }}
     </v-card-title>
+
   </v-card>
 </template>
 

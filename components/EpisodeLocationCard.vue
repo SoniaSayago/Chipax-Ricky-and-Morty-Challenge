@@ -4,12 +4,16 @@
     </v-card-title>
     <v-card-text>
       <small class="ml-2">{{ episode ? episode.episode : '' }}</small>
-      <p class="display-1 text--primary">{{ episode ? episode.name : '' }}</p>
+      <p class="display-2 text--primary">{{ episode ? episode.name : '' }}</p>
+        <div>
+          Appears
+          <strong>{{ episode && episode.characters ? episode.characters.length : ''}} characters</strong>
+        </div>
       <p>Episode characters origins</p>
       <v-slide-group v-if="episode && episode.origins">
         <v-chip
-          v-bind:key="origin.name"
           v-for="origin in episode.origins"
+          :key="origin.name"
           class="ma-2"
         >
           {{ origin.name }}

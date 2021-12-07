@@ -35,8 +35,9 @@ export function getAllLocations(axios: any, cursor: string, query: string, data 
     })
 }
 
+
 export default ($axios: any) => ({
-  
+
   getEpisodes(query: string) {
     return getAllEpisodes($axios, '', query)
   },
@@ -47,12 +48,6 @@ export default ($axios: any) => ({
 
   getLocations(query: string) {
     return getAllLocations($axios, '', query)
-  }
+  },
 
-
-  
-
-  
-
-  
 })
