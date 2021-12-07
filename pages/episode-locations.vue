@@ -7,7 +7,7 @@
         <h4 v-else>Program duration: {{ programDuration }} milliseconds</h4>
       </div>
     </v-row>
-    <v-row class="mb-8">
+    <v-row class="mb-5">
       <v-col v-for="episode in episodeResults" :key="episode.name" md="4">
         <EpisodeLocationCard :episode="episode" />
       </v-col>
@@ -65,7 +65,7 @@ export default Vue.extend({
       const startTime = await new Date();
       this.fetchingDone = false;
       (this as any).$repositories.episodeLocations()
-        .then ((resEpisodes: { data: { episodes: Episode[]; next: string } }) => {
+        .then((resEpisodes: { data: { episodes: Episode[]; next: string } }) => {
           this.episodeResults = resEpisodes.data.episodes;
           this.nextEpisodesPage = resEpisodes.data.next;
         })

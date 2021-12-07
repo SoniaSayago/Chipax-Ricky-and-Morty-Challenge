@@ -4,11 +4,9 @@
     </v-card-title>
     <v-card-text>
       <small class="ml-2">{{ episode ? episode.episode : '' }}</small>
-      <p class="display-2 text--primary">{{ episode ? episode.name : '' }}</p>
-        <div>
-          Appears
-          <strong>{{ episode && episode.characters ? episode.characters.length : ''}} characters</strong>
-        </div>
+      <p class="text-md-h5 font-weight-bold text--primary">{{ episode ? episode.name : '' }}</p>
+      <div>Appears <strong>{{ episode && episode.characters ? episode.characters.length : ''}} characters</strong>
+      </div>
       <p>Episode characters origins</p>
       <v-slide-group v-if="episode && episode.origins">
         <v-chip

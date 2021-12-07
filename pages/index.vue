@@ -1,8 +1,9 @@
 <template>
-  <v-row justify="center" align="center" class="mt-16">
-    <v-col class="text-center" cols="12" sm="5" md="6">
-    </v-col>
-  </v-row>
+      <v-img
+        src="https://www.chipax.com/wp-content/uploads/2019/08/chipax-logo-500px-1.png"
+        style="width:150px"
+        contain>
+      </v-img>
 </template>
 
 <script>

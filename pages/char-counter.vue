@@ -72,7 +72,7 @@
         <v-card-title>
           <h4 class="custom-title">Characters with '{{characterQuery}}' matches</h4>
           <v-spacer></v-spacer>
-          <v-chip class="ma-2" color="green" text-color="white">
+          <v-chip class="ma-auto" color="green" text-color="white">
             <v-avatar left class="green darken-4">
               {{characterCount}}
             </v-avatar>
@@ -180,7 +180,7 @@ export default Vue.extend({
         console.error('ERROR in getAllEpisodes()', err);
       }).finally(() => this.finishTime = new Date());
     },
-    
+
     async getCharacters() {
       (this as any).$repositories.characters(this.characterQuery).then(
         (resCharacters: Character[]) => {

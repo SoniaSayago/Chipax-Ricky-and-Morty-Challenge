@@ -1,8 +1,8 @@
 <template>
   <v-card class="ma-2">
-    <v-card-title>
+    <v-card-subtitle  class='font-weight-bold'>
       {{ location ? location.name : '' }}
-    </v-card-title>
+    </v-card-subtitle>
 
   </v-card>
 </template>
