@@ -6,8 +6,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - rick_morty',
-    title: 'rick_morty_chipax_challegue',
+    titleTemplate: '%s - Sonia Sayago',
+    title: 'Ricky and Morty Challenge',
     htmlAttrs: {
       lang: 'en'
     },

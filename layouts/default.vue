@@ -27,11 +27,19 @@
     <v-app-bar
       :clipped-left="clipped"
       fixed
-      app
-    >
+      app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-
       <v-toolbar-title v-text="title" />
+      <div class="flex-grow-1"></div>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>
+      <v-btn href="https://github.com/SoniaSayago" target="_blank" icon>
+        <v-icon>mdi-github</v-icon>
+      </v-btn>
+      <v-btn href="https://www.linkedin.com/in/sonia-sayago-salazar/" target="_blank" icon>
+        <v-icon>mdi-linkedin</v-icon>
+      </v-btn>
       <v-spacer />
     </v-app-bar>
     <v-main>
@@ -42,7 +50,6 @@
     <v-footer
       :absolute="!fixed"
       app
-      class="text-center"
     >
       <span>&copy; <strong>Made with 💛 from Sonia Sayago {{ new Date().getFullYear() }}</strong> </span>
     </v-footer>

@@ -23,8 +23,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { Episode } from '~/models/episode'
-import { calculateDuration } from '~/utils/timeUtils'
+import { Episode } from '~/models/episode';
+import { calculateDuration } from '~/utils/timeUtils';
 import EpisodeLocationCard from '~/components/EpisodeLocationCard.vue'
 
 export default Vue.extend({

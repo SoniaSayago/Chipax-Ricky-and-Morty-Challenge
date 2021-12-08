@@ -1,8 +1,8 @@
 <template>
-  <v-card>
+  <v-card >
     <v-card-title>
     </v-card-title>
-    <v-card-text>
+    <v-card-text elevation="2">
       <small class="ml-2">{{ episode ? episode.episode : '' }}</small>
       <p class="text-md-h5 font-weight-bold text--primary">{{ episode ? episode.name : '' }}</p>
       <div>Appears <strong>{{ episode && episode.characters ? episode.characters.length : ''}} characters</strong>
